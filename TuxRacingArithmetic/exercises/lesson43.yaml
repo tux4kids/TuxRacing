@@ -1,0 +1,36 @@
+---
+settings:
+  addition_allowed: false
+  subtraction_allowed: false
+  multiplication_allowed: true
+  division_allowed: true
+  min_augend: .NaN
+  max_augend: .NaN
+  min_addend: .NaN
+  max_addend: .NaN
+  min_multiplier: 13
+  max_multiplier: 15
+  min_multiplicand: 0
+  max_multiplicand: 15
+  min_minuend: .NaN
+  max_minuend: .NaN
+  min_subtrahend: .NaN
+  max_subtrahend: .NaN
+  min_divisor: 13
+  max_divisor: 15
+  min_quotient: 0
+  max_quotient: 15
+  format_answer_last: true
+  format_answer_middle: false
+  format_answer_first: false
+  allow_negatives: false
+  max_answer: 400
+  firstPlace: 20
+  secondPlace: 15
+  maxRate: 25
+  duration: 60
+title: Division by 13, 14, and 15
+id: 43
+...
+--- utf8
+...

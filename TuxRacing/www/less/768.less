@@ -1,0 +1,72 @@
+/* 768 =================================================== */
+
+// 1. ROOT                     ==============================
+// 2. TYPOGRAPHY             ==============================
+@t_height: 92;
+header[role=banner] h1 {
+    .font-size(@t_height);
+}
+
+// 3. COLOUR                 ==============================
+// 4. TEXTURE                 ==============================
+// 5. ELEMENTS                 ==============================
+.indexPage {
+    #titlePenguin {
+        background: transparent url('../img/title_penguin_92.png') no-repeat;
+        .height(@t_height);
+        .width(@t_height * 0.7004);
+        .margin-bottom(@t_height * (1 / 1.2 - 1));
+    }
+}
+
+.blockLinkList {
+    a {
+        .font-size(24);
+    }
+}
+
+.visualBlock {
+    width: 50%;
+}
+
+.exercise {
+    #TRSpace {
+        bottom: 9rem;
+    }
+
+
+    #TRExercise {
+        height: 9rem;
+
+        .tr_question {
+            font-size: 3rem;
+            line-height: 3rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+        ul {
+            height: 4rem;
+        }
+        .tr_choice {
+            line-height: 4rem;
+            height: 4rem;
+
+            a {
+                font-size: 2em;
+            }
+        }
+    }
+
+    .TRShip {
+    }
+
+    .meter {
+        span.bg {
+            width: 9em;
+        }
+    }
+}
+// 6. LAYOUT                 ==============================
+// 7. VENDOR-SPECIFIC         ==============================
+// 8. MODERNIZR             ==============================
+// 9. TEMPLATE SPECIFICS     ==============================

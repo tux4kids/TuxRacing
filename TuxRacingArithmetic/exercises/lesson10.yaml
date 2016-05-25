@@ -1,0 +1,36 @@
+---
+settings:
+  addition_allowed: false
+  subtraction_allowed: true
+  multiplication_allowed: false
+  division_allowed: false
+  min_augend: .NaN
+  max_augend: .NaN
+  min_addend: .NaN
+  max_addend: .NaN
+  min_multiplier: .NaN
+  max_multiplier: .NaN
+  min_multiplicand: .NaN
+  max_multiplicand: .NaN
+  min_minuend: 20
+  max_minuend: 30
+  min_subtrahend: 10
+  max_subtrahend: 20
+  min_divisor: .NaN
+  max_divisor: .NaN
+  min_quotient: .NaN
+  max_quotient: .NaN
+  format_answer_last: true
+  format_answer_middle: false
+  format_answer_first: false
+  allow_negatives: false
+  max_answer: 400
+  firstPlace: 20
+  secondPlace: 15
+  maxRate: 25
+  duration: 60
+title: 'Subtraction: Two Digit Numbers'
+id: 10
+...
+--- utf8
+...

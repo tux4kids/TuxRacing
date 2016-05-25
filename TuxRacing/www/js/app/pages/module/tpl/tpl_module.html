@@ -1,0 +1,38 @@
+<header role="banner" class="clearfix">
+    <h1><%=module.name()%></h1>
+    <div class="headerInfo visualBlock">
+        <span class="backButton clearfix">
+            <a href="#/moduleList">
+                <i class="icon-arrow-left"></i>
+                <%=text.backLabel%>
+            </a>
+        </span>
+        <span class="collectedStars clearfix">
+            <span class="starProgress">
+                <i class="icon-star"></i>
+            </span>
+            <%=collectedStars%> / <%=maxStars%>
+        </span>
+    </div>
+</header>
+
+<!-- content -->
+<div class="content clearfix">
+    <ul class="blockLinkList">
+        <% for (var i = 0; i < exercises.length; i++) { %>
+        <li>
+            <a href="#/exercise/<%=module.ref()%>/<%=exercises[i].id%>" class="visualBlock">
+                <span class="blockLinkTitle"><%= exercises[i].title %></span>
+                <span class="starProgress">
+                    <% for (var k = 0; k < exercises[i].stars; k++) { %>
+                        <i class="icon-star"></i>
+                    <% } %>
+                    <% for (; k < 3; k++) { %>
+                        <i class="icon-star-empty"></i>
+                    <% } %>
+                </span>
+            </a>
+        </li>
+        <% } %>
+    </ul>
+</div>

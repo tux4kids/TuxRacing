@@ -1,0 +1,27 @@
+info:
+  title: Density
+  id: density
+  relativeOrder: 10
+  choices: 4
+  firstPlace: 30
+  secondPlace: 20
+  maxRate: 40
+  duration: 180
+  c1: 0.008333333333333333
+  c2: 0.25
+
+problems:
+  - question: 500g of a substance is placed in 10L. What is the density?
+    choices:
+     - 50g/L
+     - 5g/L
+     - 500g/L
+     - 5000g/L
+
+  - question: A substance has a density of 5g/L, What is the mass of 500mL?
+    choices:
+     - 2.5g
+     - 2500g
+     - 25g
+     - 100g
+     - 0.00g

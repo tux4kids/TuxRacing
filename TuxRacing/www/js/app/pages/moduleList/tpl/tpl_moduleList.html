@@ -1,0 +1,39 @@
+<header role="banner" class="clearfix">
+    <h1><%=text.title%></h1>
+    <div class="headerInfo visualBlock">
+        <span class="backButton clearfix">
+            <a href="#/index">
+                <i class="icon-arrow-left"></i>
+                <%=text.backLabel%>
+            </a>
+        </span>
+    </div>
+</header>
+
+<!-- content -->
+<div class="content clearfix">
+    <% if (supportedModules.length) { %>
+    <ul class="modules">
+        <% for (var i = 0; i < supportedModules.length; i++) { %>
+        <li>
+            <a href="#/module/<%=supportedModules[i].ref()%>">
+                <img src="<%=supportedModules[i].iconPath()%>" />
+            </a>
+        </li>
+        <% } %>
+    </ul>
+    <% } %>
+    <% if (unsupportedModules.length) { %>
+    <h4><%=text.otherLanguages%></h4>
+    <ul class="modules">
+        <% for (i = 0; i < unsupportedModules.length; i++) { %>
+        <li>
+            <a href="#/module/<%=unsupportedModules[i].ref()%>">
+                <img src="<%=unsupportedModules[i].iconPath()%>" />
+            </a>
+        </li>
+        <% } %>
+    </ul>
+    <% } %>
+</div>
+<!-- / content -->

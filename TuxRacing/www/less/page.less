@@ -1,0 +1,463 @@
+/* Page banner/title text. Base-size for < 480px devices */
+@t_height: 42;
+header[role=banner] h1 {
+    margin: 0.2em auto 0.2em auto;
+    text-align: center;
+    font-family: 'ChewyRegular', cursive;
+    font-weight: normal;
+    .outline_text();
+    .font-size(@t_height);
+}
+
+/* Default visualBlock width is 90%, scaled down on larger screens */
+.visualBlock {
+    width: 90%;
+}
+
+/* Header info appears below the title (back links, stars) */
+.headerInfo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+
+/* black semi-transparent round button with bold text for the back buttons */
+.backButton {
+    float: left;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.5em;
+    font-weight: bold;
+    .rounded(0.25em);
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/*
+Title text with a penguin to the left of it over a blockLinkList list.
+Last row (settings/quit) gets split in half when quit is available (app).
+*/
+.indexPage {
+    #titlePenguin {
+        display: inline-block;
+        background: transparent url('../img/title_penguin_42.png') no-repeat;
+        .height(@t_height);
+        .width(@t_height * 0.7004);
+        .margin-bottom(@t_height * (1 / 1.2 - 1));
+    }
+
+    .blockLinkList li div.visualBlock {
+        margin-left: auto;
+        margin-right: auto;
+
+        .half {
+            width: 49%;
+        }
+        .full {
+            width: 100%;
+        }
+
+        a {
+            display: inline-block;
+
+            span {
+                display: block;
+            }
+        }
+
+        #displaySettings {
+            float: left;
+        }
+
+        #quitLink {
+            float: right;
+        }
+    }
+}
+
+
+/*
+Error page is header title over a centered error message with a semi-transparent red background
+*/
+.errorPage {
+    header[role=banner] {
+        text-align: center;
+        margin-bottom: 1em;
+
+        h1 {
+            .font-size(72);
+            margin: 0;
+        }
+    }
+
+    .content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .errorDescription {
+        text-align: center;
+        .font-size(42);
+        font-weight: bold;
+        line-height: 1.1;
+        background-color: rgba(225, 0, 0, 0.8);
+        padding: 0.5em;
+        display: block;
+        .rounded(0.25em);
+    }
+}
+
+#overlay {
+    a {
+        color: white;
+    }
+}
+
+/*
+blockLinkList sets up styling for a list of links where:
+- Links have a nice blue gradient background with solid white text
+- Optional black "dropdown" for additional text (stars)
+*/
+.blockLinkList {
+    text-align: center;
+        
+    li {
+        margin-top: 1.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        list-style-type: none;
+        text-align: center;
+        
+        &:first-child {
+            margin-top: 0.5em;
+        }
+    }
+    
+    a {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.1;
+        .font-size(16);
+        text-decoration: none;
+        .rounded(0.25em);
+        background-color: rgba(0, 0, 0, 0.6);
+        
+        span {
+            display: block;
+        }
+        
+        .blockLinkTitle {
+            border: 0.1em solid white;
+            padding: 0.3em;
+            
+            color: white;
+            text-decoration: none;
+            .radial(@blocklink_start, 6%, @blocklink_end, 100%);
+            .rounded(0.25em);
+            .outline_text();
+        }
+        
+        &:hover {
+            .blockLinkTitle {
+                .radial(lighten(@blocklink_start, 20%), 6%, lighten(@blocklink_end, 20%), 100%);
+            }
+        }
+        
+        &:active {
+            .blockLinkTitle {
+                .radial(darken(@blocklink_start, 20%), 6%, darken(@blocklink_end, 20%), 100%);
+            }
+        }
+    }
+}
+
+/*
+Module list is a series of squares with centered module icon images. Uses the
+blue gradient background from blockLinkList
+Just fills out horizontally then vertically.
+*/
+.moduleList {
+    header[role=banner] {
+        text-align: center;
+        margin-bottom: 1em;
+
+        h1 {
+            .font-size(72);
+            margin: 0;
+        }
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+    .modules {
+        text-align: center;
+    
+        li {
+            display: inline-block;
+            margin: 1em;
+        }
+        
+        a {
+            display: block;
+            border: 0.1em solid white;
+
+            text-decoration: none;
+            .radial(@blocklink_start, 6%, @blocklink_end, 100%);
+            .outline_text();
+            .rounded(0.5em);
+
+            img {
+                margin: 1em;
+                max-height: 10em;
+                max-width: 10em;
+            }
+
+            &:hover {
+                .radial(lighten(@blocklink_start, 20%), 6%, lighten(@blocklink_end, 20%), 100%);
+            }
+            
+            &:active {
+                .radial(darken(@blocklink_start, 20%), 6%, darken(@blocklink_end, 20%), 100%);
+            }
+        }
+    }
+}
+
+/*
+Module page is a list of exercises in a blockLinkList. Star coloring
+*/
+.module {
+    /* All stars have the same color */
+    .starProgress {
+        color: rgb(255, 223, 0);
+    }
+    
+    /* Customize the header for modules */
+    header[role=banner] {
+        text-align: center;
+        
+        /* Modules / exercise titles have a lower size cap than the title text */
+        h1 {
+            .font-size(72);
+            margin: 0;
+        }
+        
+        /* Padded display of collected vs available stars for this module / category */
+        .collectedStars {
+            color: white;
+            font-weight: bold;
+            float: right;
+            background-color: rgba(0, 0, 0, 0.8);
+            .rounded(0.25em);
+            padding: 0.5em;
+        }
+    }
+}
+
+/*
+Exercise page is split into two main portions:
+- Space: The top portion, where the game entities fly around in.
+- Exercise: Where the questions/choices appear
+
+Game entities are absolutely position within the area of space.
+
+Exercises have a gray background. White questions, with choices using the same
+blue gradient as blockLinkList. Correct and incorrect choices are highlighted
+in a red or green gradient based, respectively.
+
+The game also has two meters: energy and time. These float above the space field,
+along the top-left of the page
+*/
+.exercise {
+    #TRSpaceCanvas {
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        bottom: 15rem;
+        position: absolute;
+    }
+
+    #TRSpace {
+        width: 100%;
+        bottom: 6rem;
+        top: 0em;
+        position: absolute;
+        overflow: hidden;
+        z-index: 5;
+    }
+
+    #TRExercise {
+        width: 100%;
+        bottom: 0;
+        background-color: fadeout(@darkgrey, 30%);
+        position: absolute;
+        z-index: 5;
+        height: 6rem;
+
+        .tr_question {
+            font-size: 1rem;
+            display: block;
+            line-height: 1rem;
+            margin: 0;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+        ul {
+            height: 3rem;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        .tr_choice {
+            display: inline-block;
+            width: 25%;
+            line-height: 3rem;
+            height: 3rem;
+            text-align: center;
+            vertical-align: middle;
+            background-color: magenta;
+            .box-sizing(border-box);
+            border: 2px solid white;
+
+            a {
+                text-decoration: none;
+                cursor: pointer;
+                height: 100%;
+                width: 100%;
+                display: block;
+                color: #fff;
+                font-size: 1.5em;
+                .radial(@blocklink_start, 6%, @blocklink_end, 100%);
+                .outline_text();
+
+                &:hover {
+                    .radial(lighten(@blocklink_start, 20%), 6%, lighten(@blocklink_end, 20%), 100%);
+                }
+
+                &:active {
+                    .radial(darken(@blocklink_start, 20%), 6%, darken(@blocklink_end, 20%), 100%);
+                }
+            }
+
+            a.correct {
+                .radial(@correctlink_start, 6%, @correctlink_end, 100%);
+
+                &:hover {
+                    .radial(@correctlink_start, 6%, @correctlink_end, 100%);
+                }
+
+                &:active {
+                    .radial(@correctlink_start, 6%, @correctlink_end, 100%);
+                }
+            }
+
+            a.incorrect {
+                .radial(@incorrectlink_start, 6%, @incorrectlink_end, 100%);
+
+                &:hover {
+                    .radial(@incorrectlink_start, 6%, @incorrectlink_end, 100%);
+                }
+
+                &:active {
+                    .radial(@incorrectlink_start, 6%, @incorrectlink_end, 100%);
+                }
+            }
+        }
+
+        .invisible {
+            visibility: hidden;
+        }
+    }
+
+    .TRShip {
+        position: absolute;
+        z-index: 6;
+        width: 3.5em;
+        height: auto;
+        left: 0;
+        top: 0;
+    }
+
+    .meterContainer {
+        top: 0;
+        right: 0;
+        z-index: 5;
+        position: absolute;
+    }
+
+    .meter {
+        height: 1em;
+        opacity: 0.7;
+        margin: 0.5em;
+        display: inline-block;
+
+        i {
+            font-size: 1em;
+        }
+
+        span {
+            display: inline-block;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        span.bg {
+            background: #000;
+            width: 6em;
+        }
+    }
+
+    .energyMeter {
+        span {
+            background: #007bff;
+        }
+    }
+
+    .timeMeter {
+        span {
+            background: orange;
+        }
+    }
+}
+/*
+Results page is a simple list of white position results each with black background
+*/
+.resultsPage {
+
+    header[role=banner] {
+        text-align: center;
+
+        h1 {
+            .font-size(72);
+            margin: 0;
+        }
+    }
+     .blockLinkList {
+         span {
+             border: 0.1em solid white;
+             padding: 0.3em;
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+             line-height: 1.1;
+            .font-size(16);
+            .rounded(0.25em);
+            background-color: rgba(0, 0, 0, 0.6);
+         }
+     }
+}
+
+footer[role=contentinfo] {
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+---
+settings:
+  addition_allowed: false
+  subtraction_allowed: false
+  multiplication_allowed: true
+  division_allowed: false
+  min_augend: .NaN
+  max_augend: .NaN
+  min_addend: .NaN
+  max_addend: .NaN
+  min_multiplier: 0
+  max_multiplier: 12
+  min_multiplicand: 0
+  max_multiplicand: 12
+  min_minuend: .NaN
+  max_minuend: .NaN
+  min_subtrahend: .NaN
+  max_subtrahend: .NaN
+  min_divisor: .NaN
+  max_divisor: .NaN
+  min_quotient: .NaN
+  max_quotient: .NaN
+  format_answer_last: true
+  format_answer_middle: false
+  format_answer_first: false
+  allow_negatives: false
+  max_answer: 400
+  firstPlace: 25
+  secondPlace: 20
+  maxRate: 30
+  duration: 60
+title: 'Multiplication: 0 to 12'
+id: 26
+...
+--- utf8
+...

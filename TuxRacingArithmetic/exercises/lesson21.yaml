@@ -1,0 +1,36 @@
+---
+settings:
+  addition_allowed: false
+  subtraction_allowed: false
+  multiplication_allowed: true
+  division_allowed: false
+  min_augend: .NaN
+  max_augend: .NaN
+  min_addend: .NaN
+  max_addend: .NaN
+  min_multiplier: 8
+  max_multiplier: 8
+  min_multiplicand: 0
+  max_multiplicand: 10
+  min_minuend: .NaN
+  max_minuend: .NaN
+  min_subtrahend: .NaN
+  max_subtrahend: .NaN
+  min_divisor: .NaN
+  max_divisor: .NaN
+  min_quotient: .NaN
+  max_quotient: .NaN
+  format_answer_last: true
+  format_answer_middle: false
+  format_answer_first: false
+  allow_negatives: false
+  max_answer: 400
+  firstPlace: 30
+  secondPlace: 25
+  maxRate: 35
+  duration: 60
+title: Multiples of 8
+id: 21
+...
+--- utf8
+...

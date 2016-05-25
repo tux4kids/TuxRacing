@@ -1,0 +1,36 @@
+---
+settings:
+  addition_allowed: true
+  subtraction_allowed: false
+  multiplication_allowed: false
+  division_allowed: false
+  min_augend: 1
+  max_augend: 3
+  min_addend: 1
+  max_addend: 3
+  min_multiplier: .NaN
+  max_multiplier: .NaN
+  min_multiplicand: .NaN
+  max_multiplicand: .NaN
+  min_minuend: .NaN
+  max_minuend: .NaN
+  min_subtrahend: .NaN
+  max_subtrahend: .NaN
+  min_divisor: .NaN
+  max_divisor: .NaN
+  min_quotient: .NaN
+  max_quotient: .NaN
+  format_answer_last: true
+  format_answer_middle: false
+  format_answer_first: false
+  allow_negatives: false
+  max_answer: 400
+  firstPlace: 30
+  secondPlace: 25
+  maxRate: 40
+  duration: 60
+title: 'Addition: 1 to 3'
+id: 1
+...
+--- utf8
+...

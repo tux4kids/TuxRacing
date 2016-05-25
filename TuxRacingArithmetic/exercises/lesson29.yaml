@@ -1,0 +1,36 @@
+---
+settings:
+  addition_allowed: false
+  subtraction_allowed: false
+  multiplication_allowed: true
+  division_allowed: false
+  min_augend: .NaN
+  max_augend: .NaN
+  min_addend: .NaN
+  max_addend: .NaN
+  min_multiplier: 0
+  max_multiplier: 10
+  min_multiplicand: 0
+  max_multiplicand: 10
+  min_minuend: .NaN
+  max_minuend: .NaN
+  min_subtrahend: .NaN
+  max_subtrahend: .NaN
+  min_divisor: .NaN
+  max_divisor: .NaN
+  min_quotient: .NaN
+  max_quotient: .NaN
+  format_answer_last: false
+  format_answer_middle: true
+  format_answer_first: true
+  allow_negatives: false
+  max_answer: 999
+  firstPlace: 20
+  secondPlace: 15
+  maxRate: 25
+  duration: 60
+title: 'Multiplication: Missing Numbers'
+id: 29
+...
+--- utf8
+...

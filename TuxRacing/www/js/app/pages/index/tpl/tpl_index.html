@@ -1,0 +1,36 @@
+<header role="banner" class="clearfix">
+    <h1>
+        <div id="titlePenguin"></div>
+        Space Explorer
+    </h1>
+</header>
+
+<!-- content -->
+<div class="content clearfix">
+    <ul class="blockLinkList">
+        <li>
+            <a href="#/moduleList" class="visualBlock">
+                <span class="blockLinkTitle">
+                    <%=text.play%>
+                </span>
+            </a>
+        </li>
+        <li>
+            <div class="visualBlock clearfix">
+                <a href="#" id="displaySettings" class="<% if (navigator && navigator.app && navigator.app.exitApp) { %>half<%} else { %>full<% } %>">
+                    <span class="blockLinkTitle">
+                        <%=text.settings%>
+                    </span>
+                </a>
+                <% if (navigator && navigator.app && navigator.app.exitApp) { %>
+                <a href="#" id="quitLink" class="half">
+                    <span class="blockLinkTitle">
+                        <%=text.quit%>
+                    </span>
+                </a>
+                <% } %>
+            </div>
+        </li>
+    </ul>
+</div>
+<!-- / content -->

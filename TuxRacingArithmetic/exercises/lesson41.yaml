@@ -1,0 +1,36 @@
+---
+settings:
+  addition_allowed: false
+  subtraction_allowed: false
+  multiplication_allowed: true
+  division_allowed: true
+  min_augend: .NaN
+  max_augend: .NaN
+  min_addend: .NaN
+  max_addend: .NaN
+  min_multiplier: 11
+  max_multiplier: 12
+  min_multiplicand: 0
+  max_multiplicand: 12
+  min_minuend: .NaN
+  max_minuend: .NaN
+  min_subtrahend: .NaN
+  max_subtrahend: .NaN
+  min_divisor: 11
+  max_divisor: 12
+  min_quotient: 0
+  max_quotient: 12
+  format_answer_last: true
+  format_answer_middle: false
+  format_answer_first: false
+  allow_negatives: false
+  max_answer: 400
+  firstPlace: 25
+  secondPlace: 20
+  maxRate: 30
+  duration: 60
+title: Division by 11 and 12
+id: 41
+...
+--- utf8
+...

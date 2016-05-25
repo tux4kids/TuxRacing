@@ -1,0 +1,21 @@
+<header role="banner" class="clearfix">
+    <h1><%=text.title%></h1>
+    <div class="headerInfo visualBlock">
+        <% if (backLocation) { %>
+        <span class="backButton clearfix">
+            <a href="<%=backLocation%>">
+                <i class="icon-arrow-left"></i>
+                <%=backLabel%>
+            </a>
+        </span>
+        <% } %>
+    </div>
+</header>
+
+<!-- content -->
+<div class="content clearfix visualBlock">
+    <span class="errorDescription">
+        <%=errorMsg%>
+    </span>
+</div>
+<!-- / content -->

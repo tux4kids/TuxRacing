@@ -1,0 +1,36 @@
+---
+settings:
+  addition_allowed: false
+  subtraction_allowed: false
+  multiplication_allowed: true
+  division_allowed: true
+  min_augend: .NaN
+  max_augend: .NaN
+  min_addend: .NaN
+  max_addend: .NaN
+  min_multiplier: 4
+  max_multiplier: 4
+  min_multiplicand: 0
+  max_multiplicand: 10
+  min_minuend: .NaN
+  max_minuend: .NaN
+  min_subtrahend: .NaN
+  max_subtrahend: .NaN
+  min_divisor: 4
+  max_divisor: 4
+  min_quotient: 0
+  max_quotient: 10
+  format_answer_last: true
+  format_answer_middle: false
+  format_answer_first: false
+  allow_negatives: false
+  max_answer: 400
+  firstPlace: 30
+  secondPlace: 25
+  maxRate: 35
+  duration: 60
+title: Division by 4
+id: 32
+...
+--- utf8
+...
